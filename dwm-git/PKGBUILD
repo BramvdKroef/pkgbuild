@@ -16,7 +16,7 @@ epoch=1
 source=(config.h
         dwm.desktop
         "$_pkgname::git+http://git.suckless.org/dwm")
-md5sums=('a750c56815619655467ac81c16dae865'
+md5sums=('c58973d6e8a8492b5e2a46bd90d13631'
          '939f403a71b6e85261d09fc3412269ee'
          'SKIP')
 
