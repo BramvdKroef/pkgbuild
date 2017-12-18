@@ -1,0 +1,14 @@
+src/
+pkg/
+*.bin
+*.deb
+*.gz
+*.lzma
+*.rpm
+*.run
+*.tar
+*.tar.bz2
+*.tar.gz
+*.tgz
+*.zip
+*.xz
