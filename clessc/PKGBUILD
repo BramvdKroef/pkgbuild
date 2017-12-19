@@ -1,13 +1,6 @@
-# This is an example PKGBUILD file. Use this as a start to creating your own,
-# and remove these comments. For more information, see 'man PKGBUILD'.
-# NOTE: Please fill out the license field for your package! If it is unknown,
-# then please put 'unknown'.
 
-# The following guidelines are specific to BZR, GIT, HG and SVN packages.
-# Other VCS sources are not natively supported by makepkg yet.
-
-# Maintainer: Your Name <youremail@domain.com>
-pkgname=clessc-git # '-bzr', '-git', '-hg' or '-svn'
+# Maintainer: Bram van der Kroef <bram@vanderkroef.net>
+pkgname=clessc-git
 pkgver=r488.c3c8c1b
 pkgrel=1
 pkgdesc="A LESS CSS Compiler written in C++"
@@ -16,22 +9,13 @@ url="https://github.com:BramvdKroef/clessc"
 license=('MIT')
 groups=()
 depends=()
-makedepends=('git') # 'bzr', 'git', 'mercurial' or 'subversion'
+makedepends=('git') 
 optdepends=('libpng: png image functions support'
             'libjpeg: jpg image functions support'
             'google-glog: logging and debugging support')
 provides=("clessc")
-conflicts=()
-replaces=()
-backup=()
-options=()
-install=
 source=("git://github.com/BramvdKroef/clessc.git")
-noextract=()
 md5sums=('SKIP')
-
-# Please refer to the 'USING VCS SOURCES' section of the PKGBUILD man page for
-# a description of each element in the source array.
 
 pkgver() {
 	cd "$srcdir/${pkgname%-git}"
@@ -47,6 +31,7 @@ build() {
 	make
 }
 
+# Uncomment once features have been implemented.
 #check() {
 #	cd "$srcdir/${pkgname%-git}"
 #	make -k check
