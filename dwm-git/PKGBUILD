@@ -7,7 +7,7 @@ url="http://dwm.suckless.org"
 arch=('i686' 'x86_64')
 license=('MIT')
 options=(zipman)
-depends=('libx11' 'libxinerama' 'libxft' dmenu st-git libpulse)
+depends=('libx11' 'libxinerama' 'libxft' 'dmenu' 'st-git' 'libpulse' 'ttf-inconsolata')
 makedepends=('git')
 install=dwm.install
 provides=('dwm')
@@ -16,7 +16,7 @@ epoch=1
 source=(config.h
         dwm.desktop
         "$_pkgname::git+http://git.suckless.org/dwm")
-md5sums=('c58973d6e8a8492b5e2a46bd90d13631'
+md5sums=('fb33e66ee95986cc127497112e42b1f8'
          '939f403a71b6e85261d09fc3412269ee'
          'SKIP')
 
