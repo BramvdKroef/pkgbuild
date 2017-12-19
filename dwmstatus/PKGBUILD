@@ -1,0 +1,29 @@
+pkgname=dwmstatus-git
+pkgver=r1.c47e4ad
+pkgdesc="A custom status bar for DWM"
+url="http://"
+arch=('i686' 'x86_64')
+license=('MIT')
+depends=('libx11' 'curl' 'libxml2')
+makedepends=('git')
+provides=('dwmstatus')
+conflicts=('dwmstatus')
+source=(config.h
+        "git://github.com/BramvdKroef/dwmstatus.git")
+md5sums=('a6b6073bd5e80b71c28a02c63c3391d3'
+         'SKIP')
+
+pkgver(){
+    	cd "$srcdir/${pkgname%-git}"
+	printf "r%s.%s" "$(git rev-list --count HEAD)" "$(git rev-parse --short HEAD)"
+}
+
+prepare() {
+    cd "$srcdir/${pkgname%-git}"
+    cp -f $srcdir/config.h config.h
+}
+
+package() {
+    make DESTDIR="$pkgdir/" install
+}
+
