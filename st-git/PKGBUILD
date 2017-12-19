@@ -12,7 +12,7 @@ arch=('i686' 'x86_64')
 license=('MIT')
 options=('zipman')
 depends=('libxft')
-makedepends=('ncurses' 'libxext' 'git')
+makedepends=('ncurses' 'libxext' 'git' 'ttf-inconsolata')
 epoch=1
 # include config.h and any patches you want to have applied here
 source=(config.h 'git://git.suckless.org/st')
