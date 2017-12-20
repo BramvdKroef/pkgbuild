@@ -1,5 +1,6 @@
 pkgname=dwmstatus-git
-pkgver=r1.c47e4ad
+pkgver=r10.1c0b2f2
+pkgrel=1
 pkgdesc="A custom status bar for DWM"
 url="http://"
 arch=('i686' 'x86_64')
@@ -24,6 +25,7 @@ prepare() {
 }
 
 package() {
-    make DESTDIR="$pkgdir/" install
+    cd "$srcdir/${pkgname%-git}"
+    make PREFIX=/usr DESTDIR="$pkgdir/" install
 }
 
