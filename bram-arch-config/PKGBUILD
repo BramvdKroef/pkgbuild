@@ -1,0 +1,30 @@
+pkgname=bram-arch-config
+pkgver=1
+pkgrel=1
+pkgdesc=""
+url="http://"
+arch=('i686' 'x86_64')
+license=('MIT')
+depends=('reflector')
+source=(20-keyboard.conf
+        50-sound.conf
+        locale.conf
+        mirrorupgrade.hook
+        vconsole.conf)
+md5sums=(341721a541dd680ea12d1d7049e43aae
+         12660bbd265fe4684ca4c91b0202eaa8
+         3f6299e7638532d0d47e1073ab1c188e
+         750af18badc4b89c4c77b4b0bf548f5b
+         363d1b98421f052a095af688c2b4fc5a)
+
+build() {
+    echo
+}
+
+package() {
+    install -m644 -D $srcdir/50-sound.conf $pkgdir/etc/modprobe.d/50-sound.conf
+    install -m644 -D $srcdir/20-keyboard.conf $pkgdir/etc/X11/xorg.conf.d/20-keyboard.conf
+    install -m644 -D $srcdir/vconsole.conf $pkgdir/etc/vconsole.conf
+    install -m644 -D $srcdir/locale.conf $pkgdir/etc/locale.conf
+    install -m644 -D $srcdir/mirrorupgrade.hook $pkgdir/etc/pacman.d/hooks/mirrorupgrade.hook
+}
