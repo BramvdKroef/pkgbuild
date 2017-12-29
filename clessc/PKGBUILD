@@ -1,7 +1,7 @@
 
 # Maintainer: Bram van der Kroef <bram@vanderkroef.net>
 pkgname=clessc-git
-pkgver=r488.c3c8c1b
+pkgver=r519.e2ea8f6
 pkgrel=1
 pkgdesc="A LESS CSS Compiler written in C++"
 arch=('i686' 'x86_64')
@@ -26,9 +26,8 @@ pkgver() {
 
 build() {
     cd "$srcdir/${pkgname%-git}"
-	./autogen.sh
-	./configure --prefix=/usr
-	make
+    cmake .
+    make
 }
 
 # Uncomment once features have been implemented.
@@ -39,5 +38,5 @@ build() {
 
 package() {
 	cd "$srcdir/${pkgname%-git}"
-	make DESTDIR="$pkgdir/" install
+	make PREFIX=/usr DESTDIR="$pkgdir/" install
 }
