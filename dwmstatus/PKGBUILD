@@ -11,7 +11,7 @@ provides=('dwmstatus')
 conflicts=('dwmstatus')
 source=(config.h
         "git://github.com/BramvdKroef/dwmstatus.git")
-md5sums=('a6b6073bd5e80b71c28a02c63c3391d3'
+md5sums=('eb53f17c2e33821859f9f2c640e715ad'
          'SKIP')
 
 pkgver(){
