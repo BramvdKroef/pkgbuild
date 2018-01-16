@@ -39,4 +39,6 @@ build() {
 package() {
 	cd "$srcdir/${pkgname%-git}"
 	make PREFIX=/usr DESTDIR="$pkgdir/" install
+        gzip lessc.1
+        install lessc.1 /usr/share/man/man1/
 }
