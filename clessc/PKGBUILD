@@ -1,7 +1,7 @@
 
 # Maintainer: Bram van der Kroef <bram@vanderkroef.net>
 pkgname=clessc-git
-pkgver=r522.7962936
+pkgver=r578.afa57a5
 pkgrel=1
 pkgdesc="A LESS CSS Compiler written in C++"
 arch=('i686' 'x86_64')
@@ -39,6 +39,6 @@ build() {
 package() {
 	cd "$srcdir/${pkgname%-git}"
 	make PREFIX=/usr DESTDIR="$pkgdir/" install
-        gzip lessc.1
-        install lessc.1 /usr/share/man/man1/
+        gzip -k -f lessc.1
+        install -m644 -D lessc.1.gz "$pkgdir/usr/share/man/man1/lessc.1.gz"
 }
