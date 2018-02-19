@@ -1,7 +1,7 @@
 
 # Maintainer: Bram van der Kroef <bram@vanderkroef.net>
 pkgname=clessc-git
-pkgver=r578.afa57a5
+pkgver=r613.c4c5861
 pkgrel=1
 pkgdesc="A LESS CSS Compiler written in C++"
 arch=('i686' 'x86_64')
@@ -9,10 +9,9 @@ url="https://github.com:BramvdKroef/clessc"
 license=('MIT')
 groups=()
 depends=()
-makedepends=('git') 
+makedepends=('git' 'cmake') 
 optdepends=('libpng: png image functions support'
-            'libjpeg: jpg image functions support'
-            'google-glog: logging and debugging support')
+            'libjpeg: jpg image functions support')
 provides=("clessc")
 source=("git://github.com/BramvdKroef/clessc.git")
 md5sums=('SKIP')

@@ -12,3 +12,6 @@ pkg/
 *.tgz
 *.zip
 *.xz
+clessc/clessc/
+dwm-git/dwm/
+st-git/st/
